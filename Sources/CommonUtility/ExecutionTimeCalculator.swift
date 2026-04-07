@@ -3,14 +3,22 @@
 
 import Foundation
 
-public struct Benchmark {
+public struct ExecutionTimeCalculator {
     
+    private var id: UUID
     private let name: String
-    private let startTime: CFAbsoluteTime
+    private var startTime: CFAbsoluteTime
     
     public init(_ name: String = #function) {
+        self.id = UUID()
         self.name = name
         self.startTime = CFAbsoluteTimeGetCurrent()
+    }
+    
+    @discardableResult
+    mutating func start() -> Double{
+        self.startTime = CFAbsoluteTimeGetCurrent()
+        return startTime
     }
     
     @discardableResult
