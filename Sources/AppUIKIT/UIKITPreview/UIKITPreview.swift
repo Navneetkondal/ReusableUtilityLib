@@ -8,7 +8,7 @@
 import UIKit
 import SwiftUI
 
-public struct UIKITControllerPreview<controller: UIViewController>: UIViewControllerRepresentable{
+public struct UIKITPreview<controller: UIViewController>: UIViewControllerRepresentable{
     
     let viewController: UIViewController
     
@@ -28,7 +28,7 @@ public struct UIKITControllerPreview<controller: UIViewController>: UIViewContro
 
 // Example:
 //#Preview{
-//    UIKITControllerPreview{
+//    UIKITPreview{
 //        ViewController()
 //    }
 //}

@@ -34,5 +34,5 @@ let package = Package(
         //.testTarget(name: "ReusableLibTests",dependencies: ["AppSwiftUI"]),
         //.testTarget(name: "ReusableLibTests",dependencies: ["AppSwiftUI"]),
     ],
-    swiftLanguageModes: [.v6]
+    swiftLanguageModes: [.v5,.v6]
 )
