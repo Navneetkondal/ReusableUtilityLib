@@ -27,7 +27,7 @@ let package = Package(
         // Targets are the basic building blocks of a package, defining a module or a test suite.
         // Targets can depend on other targets in this package and products from dependencies.
         .target(name: "CommonUtility", dependencies:  [], path: "Sources/CommonUtility"),
-        .target(name: "AppSwiftUI", dependencies:  ["CommonUtility"], path: "Sources/AppSwiftUI"),
+        .target(name: "AppSwiftUI", dependencies:  ["CommonUtility", "AppUIKIT"], path: "Sources/AppSwiftUI"),
         .target(name: "AppUIKIT", dependencies:  ["CommonUtility"], path: "Sources/AppUIKIT"),
         
         .testTarget(name: "AppSwiftUITests",dependencies: ["AppSwiftUI"]),
